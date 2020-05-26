@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <button type="button" class="btn btn-danger" onclick="saySomething('this is first button ')">My Button 1</button>
+    <button type="button" class="btn btn-danger" onclick="saySomething('this is second button ')">My Button 2</button>
+</div>
+    <script>
+  function saySomething(message = 'goodbye',whisper = false){
+      if(whisper){
+          console.log(`%c${message}`,'font-size:15px');
+      }else{
+          console.log(message);
+      }
+  }
+  saySomething();
+saySomething('my name is steve', true);
+
+function square (a){
+    return a*a;
+}
+const newSquared = square(3);
+console.log(square(4));
+
+//function can be store in variable
+const squared =  function (a){
+    return a*a;
+}
+//assigning to other variable
+const otherSquared = squared;
+
+//ES6 arrow funnction
+const division = (a,b)=>{
+    return a/b;
+}
+console.log(division(6,2));
+
+//hoisting---taking function above/function declaration get hoisted to the top of your code
+
+punch();
+function punch(){
+    console.log('punch here');
+}
+
+
+    </script>
+</body>
+</html>

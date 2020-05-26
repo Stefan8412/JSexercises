@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+  const hero = {
+      name:'stefan hancar',
+      alias:'Stefan8412',
+      catchphrase:'sounds good doesnt work',
+      speak:function(){ //function inside a object is method (speak method)
+          return 'Attention' + this.catchphrase; //this is referencing to hero object
+      },
+      attack:function(sound){
+          return `(punches bad guy) ${sound}`;
+      }
+  };
+//access a property
+const thingToLookFor='alias';
+
+console.log(hero.name);//stefan hancar
+console.log(hero['name']);//stefan hancar
+console.log(hero[thingToLookFor]);//Stefan8412
+
+//accessing method(functions)
+console.log(hero.speak);//fc is store as value in our object
+console.log(hero.speak());
+console.log(hero.attack('POWWW'));
+
+'this is my string'.toUpperCase();//call methond on string
+
+
+    </script>
+</body>
+</html>

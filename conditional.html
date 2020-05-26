@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dogs-list"></div>
+    <script>
+   // const name = prompt('whats your name');
+   // const username= 'steve8412';
+//if
+//if (name=='peter'){
+   // alert('Hello');
+//}else if(name=='john'){
+//console.log('this is john')
+//} else {
+   // console.log('not peter');
+//}
+
+//for loop
+const dogsList=document.querySelector('.dogs-list');
+const dogs=[
+    {name:'bruce',type:'chihuahua'},
+    {name:'chance',type:'bernese'}
+];
+
+//for(let i = 0;i<dogs.length;i++)
+//for (let pes of dogs)
+//{
+    //console.log(dogs[i]);
+    //console.log(pes);
+ //   const dog = dogs[i];
+ //   const dogData = document.createElement('div');
+//    dogData.classList.add('jumbotron','text-center');
+    //dogData.innerText = dog.name;
+//    dogData.innerText = `${dog.name} is a ${dog.type}`;
+//    dogsList.appendChild(dogData);
+//}
+
+//while loop
+let i = 0;
+while(i < dogs.length){
+const dog = dogs[i];
+const dogData = document.createElement('div');
+dogData.classList.add('jumbotron','text-center');
+dogData.innerText = dog.name;
+dogData.innerText = `${dog.name} is a ${dog.type}`;
+dogsList.appendChild(dogData);
+i++;
+}
+
+//do while loop
+//let i = 0;
+//do{
+//same as before"
+//i++;
+//}while(i<dogs.length);
+
+
+//for ... of iteratr
+//for(let dog of dogs){
+   // const dogData = document.createElement('div');
+//dogData.classList.add('jumbotron','text-center');
+//dogData.innerText = dog.name;
+//dogData.innerText = `${dog.name} is a ${dog.type}`;
+//dogsList.appendChild(dogData);
+//}
+
+
+    </script>
+</body>
+</html>

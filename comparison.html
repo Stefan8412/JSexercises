@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const original = "steve";
+    const clone = "STEVE";
+
+    console.groupCollapsed('String');
+    console.log(original=='steve');//true
+    console.log(original==clone);//false
+    console.log(original==clone.toLowerCase());//true
+    console.groupEnd();
+
+    const num1 = 10;
+    const num2='10';
+
+    console.groupCollapsed('Numbers');
+    console.log(num1==num2);//TRUE-coorcion,true-convert 10 to string ,JS is dynamicly typed
+    console.log(num1===num2);//FALSE - check the typle also
+    console.log(num1!=num2);false
+    console.log(num1!==num2);true
+    console.groupEnd();
+
+    let what;//undefined
+    let thing = null;
+
+    console.groupCollapsed('Booleans');
+    console.log(Boolean(what));//falsie
+    console.log(Boolean(thing));//false
+    console.log(Boolean(num1));true
+    console.log(Boolean({}));//true-empty object
+    console.log(Boolean([]));//true-empty array
+    console.groupEnd();
+
+    const firstArr =[1,2,3];
+    const secondArr= [1,2,3];
+    const firstObj={color:'red'};
+    const secondObj={color:'blue'};
+;
+    console.groupCollapsed('Objects and Array');
+    console.log(firstArr===secondArr);//false-reference type , different memory pointer
+    console.log(firstObj===secondObj);//false
+    console.groupEnd();
+
+    console.groupCollapsed('And OR');
+    console.log(Boolean('blah')&& Boolean('thing'));//true-check if both of them are true; 1 and 2
+    console.log(Boolean('blah')&& Boolean(''));//false- because second is false
+    console.log(Boolean('blah')||Boolean(''));//true - one of the must be true
+    console.log(Boolean('')||Boolean(''));//false-both are false
+
+
+    console.groupEnd();
+
+
+
+
+    </script>
+</body>
+</html>

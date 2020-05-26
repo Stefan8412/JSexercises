@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+    body, .jumbotron {padding: 30px;}
+    .text-giant {font-size: 40px;}
+    .btn-crazy{
+        position: absolute;
+        top:30px;
+        left: 35%;
+        width: 30%;
+        transition: 0.5 ease all;
+        text-align: center;
+    }
+</style>
+<body>
+   
+       <button type="button" class="btn-crazy btn btn-lg btn-danger"0>
+           Click Me!
+       </button>
+       <button type="button" class="btn-crazy btn btn-lg btn-primary"0>
+        Click Me!
+    </button>
+    <button type="button" class="btn-crazy btn btn-lg btn-success"0>
+        Click Me!
+    </button>
+
+
+<script>
+    //grab everything we need
+    const crazyButtons = document.querySelectorAll('.btn-crazy');
+
+    //define our functions
+function moveButton(e){
+    const button = e.target;
+    //get random number for the left and top offset
+const offsetLeft = Math.random() * (window.innerWidth-button.clientWidth);
+const offsetTop = Math.random() * (window.innerHeight-button.clientWidth);
+
+//instead of 'e' we can use 'this' this.clientWidth and this.style.top
+    
+
+    //apply those numbers to the button
+    button.style.top = offsetTop + 'px';
+    button.style.left = offsetLeft + 'px';
+
+}
+    //add event listeners
+    crazyButtons.forEach(button=>button.addEventListener('mouseenter',moveButton));
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- option 1 -->
+
+<div class="jumbotron text-center"><button class="btn btn-danger" onclick="goCoocoo()">Go Coocoo</button></div>
+<!-- OPtion 2 use events directly on the element in js -->
+<div class="jumbotron text-center"><button class="btn btn-danger coffee-btn" >Get Coffee</button></div>
+<div class="jumbotron text-center"><button class="btn btn-danger coffee-btn" >Get Coffee</button></div>
+<div class="jumbotron text-center"><button class="btn btn-danger coffee-btn" >Get Coffee</button></div>
+<div class="jumbotron text-center"><button class="btn btn-primary lala-btn" >Not Listening</button></div>
+<script>
+
+   
+   //1 grab element from the dom
+   //2 attach event listeners
+   
+  //const body = document.querySelector('body');
+   //body.style.backgroundColor='#C00C00'; 
+  //document.body.style.backgroundColor = '#C00C00'; 
+
+
+   function goCoocoo(){
+       document.body.style.backgroundColor='#C00C00';
+   }
+//OPTION 2 =======
+const button = document.querySelector('.coffee-btn');
+
+button.addEventListener('click', event => {
+  button.innerHTML = `Click count: ${event.detail}`;
+});
+   button.onmouseenter = goCoocoo;
+
+   const coffeeButtons = document.querySelectorAll('.coffee-btn');
+   function getCoffee(){
+document.body.style.backgroundColor = "#C0FFEE";
+
+   }
+   coffeeButtons.forEach(function(button){
+       button.onclick = getCoffee;
+   });
+//option 3 using addEventlistener
+const lalaButton = document.querySelector('.lala-btn');
+lalaButton.addEventListener('click',event =>{
+    document.body.style.backgroundColor = "#F8F898";
+})
+
+    </script>
+</body>
+</html>
