@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+   
+    <style>
+  
+        body, .jumbotron {padding: 30px;}
+        body {
+            background:#EFEFEF;
+        }
+ 
+.content{
+    background: #fff;
+    padding: 50px;
+    font-size: 19px;
+    line-height: 1.5;
+    min-height: 3000px;
+}
+.scroll-line{
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 8px;
+    background: #1CE;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) width;
+}
+        </style>
+        <body>
+            <div class="scroll-line"></div>
+                <div class="container">
+                <div class="content">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, doloribus voluptatibus? Sapiente repellendus dolorum cum placeat quos eos inventore quis incidunt quisquam, at aut, ea ratione. Suscipit aliquam eaque exercitationem.
+                </div>
+            </div>
+            
+       
+<script>
+    const scrollLine = document.querySelector('.scroll-line');
+
+    function fillScrollLine() {
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.body.clientHeight;
+        const scrolled = window.scrollY;
+        const percentScrolled = (scrolled/(fullHeight-windowHeight))*100;
+
+        //scrollLine.style.width = percentScrolled + '%';
+        scrollLine.style.width = `${percentScrolled}%`;
+    };
+
+    //window.addEventListener('scroll',fillScrollLine);
+    window.addEventListener('scroll',debounce(fillScrollLine));
+
+    function debounce(func, wait = 15, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+   
+   </script>
+</body>
+</html>
