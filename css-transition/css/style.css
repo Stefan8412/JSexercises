@@ -61,3 +61,31 @@ transition: 0.3s ease all;
 .opacity a:hover{
     opacity:0;
 }
+/*movement*/
+.movement a{
+    transition: 1s linear all;
+}
+.movement a:last-child{
+    transition-duration: 5s;
+}
+.movement:hover a{
+    transform: translateY(-20px);
+}
+.movement:hover a:last-child{
+    transform: translateY(20px);
+}
+/*rotate*/
+.rotate{
+    transition: 0.5s ease all;
+}
+.rotate:hover{
+    transform: rotate(360deg);
+}
+/*delayed*/
+.delayed h3{
+    transition: 0.5s ease all;
+    transition-delay: 1s;
+}
+.delayed:hover h3 {
+    transform: translateX(100px);
+}
