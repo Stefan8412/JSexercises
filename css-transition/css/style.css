@@ -1,0 +1,46 @@
+body{
+    background: #F6F6F6;
+}
+
+h2{
+    margin: 0 0 20px;
+    text-align: center;
+
+}
+h3{
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+section{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.box{
+    background: #FFF;
+    margin-bottom: 20px;
+    padding:20px;
+    min-height: 150px;
+    text-align: center;
+    border-radius: 4px;
+}
+/* link box transition */
+/*start state /beggining*/
+.link a{
+    display: inline-block;
+    padding:3px 2px;
+    border-radius: 3px;
+   /*  transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease; */
+    transition: 0.5s ease all;   /*in case we delete transition there will be no trasition but just change background color*/
+}
+/*end state*/
+.link a:hover{
+    background: black;
+    text-decoration: none;
+    padding:3px 9px;
+    background: #FFDCDC;
+    color: #8a1717;
+
+}
