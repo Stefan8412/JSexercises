@@ -44,3 +44,20 @@ section{
     color: #8a1717;
 
 }
+/*button box transition*/
+.button a{
+transition: 0.3s ease all;
+
+}
+.button a:hover{
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+/* opactiy*/
+.opacity a{
+    transition: 0.3s ease all;
+}
+.opacity a:hover{
+    opacity:0;
+}
