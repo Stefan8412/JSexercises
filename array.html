@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+   
+    <style>
+  
+       
+       </style>
+ <body>
+<script>
+let spices = ['salt','peper','cumin','turmeric'];
+
+let lottto = [45,12,16,25,18];
+
+let myCollection = [12, 'dog',true, null, NaN];
+
+new Array();//create empty array []
+new Array(1,2,3,4);
+
+/* accessing array*/
+
+let colors = ['red','orange', 'yellow', 'green'];
+colors.length //4
+colors[0]; //red
+colors[4];// undefined , we are start counting from 0,1,,2,3
+colors[colors.length-1]; // to get last one 'green'
+
+/*changing array - arrays are mutable we can change them...string cant be change*/
+colors[0] = 'blue';
+/* push - add to end ; pop - remove from end; shift - remove from start; unshift add to start;*/
+
+colors.push('brown');
+
+colors.pop();
+colors.shift();
+colors.unshift('black');
+
+/*concat method() is used to merge two or more array*/
+const array1 = ['a','b'];
+const array2 = [ 'c', 'd','e', 'water'];
+
+console.log(array1.concat(array2)); //['a','b','c','d']
+
+/* includes()- look for a valu */
+console.log(array2.includes('x')); //false
+console.log(array2.includes('c')); //true
+
+// arr.inclusdes(valueToFind[,fromIndex])
+array2.includes('c',2);
+
+/*indexOf()metods returns the first index at which a  given element can be found in the array or -1 if it is not present */
+array2.indexOf('c');
+
+/*join()-creates a new  string from an array  */
+array2.join();//"water,e,d,c"
+array2.join(''); //"wateredc"
+
+/*reverse()-reverse an array*/
+array2.reverse(); //['water','e','d','c']
+
+/*slice()-copy portion of an arr*/
+array2.slice(2);
+array2.slice(2,4); //include 2index not include 4index
+
+/*splice()-remove/replace elements , usually in the middle because we have method push and shift for start and end(start index,delete, item)*/
+
+array2.splice(1,0,'splice') //nothing to delete, if we delete something it return those values to array
+
+/*sort-sort an array e.g string according alphabet;also numbers take as a string */
+array2.sort();
+/*
+string are primitive types , are store in memory as a value
+when i assign one var with string to another and change after it will only affect first variable
+
+array are reference type - as memory address(pointer) , if we put array to variable, it holds an arrow a pointer a reference to where the 
+array is in memory
+when i assing one array to other and change something in first array it will affects also second arry
+*/
+
+/* NESTED ARRAY*/
+const animalPairs = [
+    ['doe','buck'],
+    ['ewe','ram'],
+    [ 'peahen','peacock']
+]
+
+animalPairs[2][0] //"peahen"
+
+const board = [
+    ['0',null,'X'],
+    [null,'X','0'],
+    [ 'X','0',null]
+]
+//tic tac toe game
+
+
+</script>
+   
+   
+</body>
+</html>
