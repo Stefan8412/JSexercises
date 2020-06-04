@@ -68,8 +68,33 @@ i++;
 //dogData.innerText = `${dog.name} is a ${dog.type}`;
 //dogsList.appendChild(dogData);
 //}
+for (let num = 1; num<=20;num++){
+    console.log(` ${num}x${num}= ${num*num}`);
+}
 
-
+const examScore= [98,77,84,91,57,66];
+for (let i =0; i<examScore.length; i++){  //i<=examScores.length print also 6 which is undefined
+    console.log(examScore[i]);
+}
+const myStudents = [
+    {
+        firstName: 'Stefan',
+        grade : 86
+    },
+    {
+        firstName: 'Peter',
+        grade:56
+    },
+    {
+        firstName: 'Kate',
+        grade: 92
+    }
+];
+for ( let i =0; i<myStudents.length; i++){
+    let student = myStudents[i];
+    console.log(`${student.firstName} scored ${student.grade}`);
+};
+ 
     </script>
 </body>
 </html>
