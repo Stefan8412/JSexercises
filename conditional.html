@@ -9,6 +9,8 @@
 <body>
     <div class="dogs-list"></div>
     <script>
+//break-will interrupt the loop
+
    // const name = prompt('whats your name');
    // const username= 'steve8412';
 //if
@@ -94,6 +96,19 @@ for ( let i =0; i<myStudents.length; i++){
     let student = myStudents[i];
     console.log(`${student.firstName} scored ${student.grade}`);
 };
+/*ITERATING OVER OBJECT*/
+Object.keys(objectname);
+object.values(objectname);
+
+const movieRevies = {
+    Allien: 9,
+    Ammelie: 8,
+    'Kill bill': 8
+};
+for (let movie of object.keys(movieRevies)){
+    console.log(movie);
+}
+
  
     </script>
 </body>
