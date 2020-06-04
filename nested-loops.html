@@ -16,7 +16,23 @@
         }
         //1.st iteration : Outer:0 Innner:L,Inner:O,Inner:L
         //2nd interration:Outer:1 Inner:L, Inner:O,Inner:L
-        //3rd itteration: Outer:2 .....
+        //3rd itteration: Outer:2 ..... 
+        // INNER LOOP ALWAYS PRINT ALL-WHOLE , WHILE OUTER LOOP ITERATE ONCE
+
+        const gameBoard = [
+            [4,32,8,4],
+            [64,8,32,2],
+            [8,32,16,4],
+            [2,8,4,2]
+        ];
+        let totalScore = 0;
+        for (let i= 0; i<gameBoard.length; i++){
+            let row = gameBoard[i];
+            for(let j = 0; j<row.length; j++){
+                totalScore+= row[j];
+            }
+        }
+//toalScore 230
     </script>
 </body>
 </html>
