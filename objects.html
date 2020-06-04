@@ -9,6 +9,7 @@
 <body>
 
     <script>
+        //object are collections of properties; properties are a key-value pair; access date using custom keys;
   const hero = {
       name:'stefan hancar',
       alias:'Stefan8412',
@@ -33,6 +34,54 @@ console.log(hero.speak());
 console.log(hero.attack('POWWW'));
 
 'this is my string'.toUpperCase();//call methond on string
+
+const fitBitData= {
+    totalSteps:308727,
+    totalMiles:211.7,
+    avgCalorieBurn: 5755,
+    workoutsThisWeek: '5 of 7',
+    avgGoodSleep:'2:13',
+    45:'forty five',
+    '76 trombones':'great song'
+};
+//accessing 45-turned it into to string
+fitBitData['45']; //forty-five
+fitBitData[45];
+
+//adding and updating properties
+const userReviews = {};
+userReviews['queenBee49'] = 4.0; //queenBee49:4
+//dot notaion
+userReviews.mrSmith78 = 3.5;
+userReviews.mrSmith78++; //4.5
+
+/*nested*/
+const student = {
+    firstname:'Steve',
+    lastname:'Hancar',
+    strength: ['music','art'],
+    exam:{
+        midterm:92,
+        final:88
+    }
+};
+const avg = (student.exam.midterm + student.exam.final)/2;
+
+const shoppingCart = [
+    {
+        product:'Vodka',
+        price:6.88,
+        quantity:1
+    },{
+    product: 'Vine',
+    price: 5.88,
+    quantity: 2
+    },
+];
+
+//two arrays with same data[1,2,3] are not equeall=> different memory allocations 
+//same for object {}==={} print FALSE - different allocation in memory
+
 
 
     </script>
