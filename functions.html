@@ -48,6 +48,50 @@ function punch(){
     console.log('punch here');
 }
 
+ //RETURN- built in method which is returning value w
+
+ const first = "mail".toUppercase(); //toUppercase method return value and we pass it to variable
+
+function add(x,y){
+    console.log(x+y);
+}
+const sum = add(3,4);
+summ;// undefined - out function just print the value , do not return anything
+
+/*with RETURN*/
+function add(x,y){
+    return x*y;
+}
+const sum = add(3,4);
+summ;// 7
+// 1. you can only return one thing from the function but we can have multiple return statement
+//2. return statement ends function executions, code afterwards will not be executed
+function square(x){
+    return x*x;
+    console.log('done');//  this will not be executed
+}
+
+function isPurple(color){
+    if(color.toLoverCase()==='purple'){
+        return true;
+    }else {
+        return false;// else mozme vynechat
+    }
+}
+//short version
+function isPurple(color){
+return color.toLoverCase()==='purple';
+}
+
+function containsPurple(arr){
+for(let color of arr ){
+if(color==='purple'|| color ==='magenta'){
+    return true;
+}
+}
+return false; // keby sme dali return false hned za return true , po prvej iteracii array by funkcia skoncila
+}
+
 
     </script>
 </body>
