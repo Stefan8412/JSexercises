@@ -19,8 +19,8 @@
 //Make sre you ignore string casing!
 
 function isPangram(sentence){
-    let lowerCase = sentence.toLowercase();
-    for (let char of 'abdefghijkmnopqrstuvwxyz'){
+    let lowerCase = sentence.toLowerCase();
+    for (let char of 'abcdefghijkmnopqrstuvwxyz'){
         if(lowerCase.indexOf(char)===-1){
         return false;
     }
