@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+   
+    <style>
+  
+       
+       </style>
+ <body>
+<script>
+  
+//WRITE A FUNCTION TO FIND THE AVERAGE VALUE IN AN ARRAY OF NUMBERS
+//AVG([0,50]) //25
+//AVG([75,76,80,95,100]) 85.2
+
+function avg(arr){
+    let total= 0;
+    //loop over each num
+    for(let num of arr){
+         //add them together
+     total+=num;
+    }
+   
+    //divide by number of nums
+    let result = total/arr.length;  //or return total / arr.length;
+    return result;
+
+}
+
+
+</script>
+   
+   
+</body>
+</html>
