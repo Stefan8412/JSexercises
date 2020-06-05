@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+   
+    <style>
+  
+       
+       </style>
+ <body>
+<script>
+ // A pangram is  sentence that contains every letter of the alphabet , like:
+// " The quick brown fox jumps over the lazy dog" return true
+//Write a function called isPangram, which checks to see if a given sentence contains evry letter of the alphabet. 
+//Make sre you ignore string casing!
+
+function isPangram(sentence){
+    let lowerCase = sentence.toLowercase();
+    for (let char of 'abdefghijkmnopqrstuvwxyz'){
+        if(lowerCase.indexOf(char)===-1){
+        return false;
+    }
+
+}
+return true;
+}
+
+
+</script>
+   
+   
+</body>
+</html>
