@@ -16,6 +16,23 @@
        </style>
  <body>
 <script>
+
+    //a callback function is a function passed into anther function as an argument, which is then invoked 
+    // inside the outer function
+function calltwice(func){
+    func();
+    func();
+}
+function laugh(){
+    console.log('haha');
+}
+calltwice(laugh)//pass a function as an arg= laugh is callback funciton
+
+//setTimeout(name of function, 50000
+//anynomous function - setTimeout(function(){
+ //   alert('welcome');
+//},5000);
+
       const btn = document.querySelector('button');
   setTimeout(()=>{
       btn.style.transform ='translateX(100px)';
@@ -32,7 +49,19 @@
 },1000);
 },1000);
 },1000);
+//same behaviour with callback
 
+const moveX = (element, amount,delay,callback)=>{
+    setTimeout(()=>{
+        element.style.transform=`translateX(${amount}px)`;
+       if(calback) callback();
+    },delay);
+};
+moveX(btn,100,1000,()=>{  //callback
+    moveX(btn,200,1000,()=>{ //callback
+
+    });
+});
 
 </script>
    
