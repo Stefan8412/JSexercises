@@ -10,8 +10,25 @@
         //a promise is an object representing the eventual completion or failure of an asynchronous operation
 
         const willGetYouADog = new Promise ((resolve,reject)=>{
+            const rand = Math.random();
+            if(rand<0.5){
+                resolve();
+            }else{
+                reject();
+            }
 
-        });
+        })
+       willGetYouADog.then(()=>{
+           console.log('We got a dog');
+
+       })
+       willGetYouADog.catch(()=>{
+           console.log('No dog');
+       })
+
+        //if we dont resolve() or reject() promise, status will be pending
+        //.every promise has a then method if promise is resolved ( we pass a callback to then)
+        //.catch if promise is rejected
     </script>
 </body>
 </html>
